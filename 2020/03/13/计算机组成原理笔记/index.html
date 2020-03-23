@@ -79,7 +79,7 @@ function activateLightMode(){
 <p>翻译型语言：C/C++、Object-C、Golang等</p>
 <p>解释型语言：Python、Php、Javascript等</p>
 <p>Java、C#属于翻译+解释型语言，例如Java程序会先编译成JVM字节码，然后再解释成机器码执行。</p>
-<h4 id="计算机的层次"><a href="#计算机的层次" class="headerlink" title="计算机的层次"></a>计算机的层次</h4><p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200313214215583.png" data-fancybox="group" data-caption="image-20200313214215583" class="fancybox"><img alt="image-20200313214215583" title="image-20200313214215583" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200313214215583.png" class="lazyload"></a></p>
+<h4 id="计算机的层次"><a href="#计算机的层次" class="headerlink" title="计算机的层次"></a>计算机的层次</h4><p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200313214215583.png" data-fancybox="group" data-caption="image-20200313214215583" class="fancybox"><img alt="image-20200313214215583" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200313214215583.png" class="lazyload" title="image-20200313214215583"></a></p>
 <p><strong>硬件逻辑层</strong></p>
 <p>由门、触发器等逻辑电路组成</p>
 <p><strong>微程序机器层</strong></p>
@@ -134,7 +134,7 @@ function activateLightMode(){
 <p><strong>设备选择线</strong>：主机选择I/O设备进行操作的信号线，对连在总线上的设备进行选择</p>
 <h4 id="CPU与I-O设备的通信"><a href="#CPU与I-O设备的通信" class="headerlink" title="CPU与I/O设备的通信"></a>CPU与I/O设备的通信</h4><p>分为程序中断、DMA（直接存储器访问）</p>
 <p><strong>程序中断</strong>：当外围I/O设备就绪时，向CPU发出中断信号，CPU有专门的电路响应中断信号。简图</p>
-<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200320150931915.png" data-fancybox="group" data-caption="image-20200320151023181" class="fancybox"><img alt="image-20200320151023181" title="image-20200320151023181" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200320150931915.png" class="lazyload"></a></p>
+<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200320150931915.png" data-fancybox="group" data-caption="image-20200320151023181" class="fancybox"><img alt="image-20200320151023181" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200320150931915.png" class="lazyload" title="image-20200320151023181"></a></p>
 <p>提供低速设备通知CPU的一种异步的方式，CPU可以在高速运转同时兼顾低速设备的响应。但是频繁中断，CPU使用效率低</p>
 <p><strong>DMA（直接存储器访问）</strong>：DMA直接连接主存与I/O设备，DMA工作时不需要CPU参与</p>
 <p>当主存与I/O设备交换信息时，不需要中断CPU，可以提高CPU的效率</p>
