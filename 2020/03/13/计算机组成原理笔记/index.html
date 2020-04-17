@@ -79,7 +79,7 @@ function activateLightMode(){
 <p>翻译型语言：C/C++、Object-C、Golang等</p>
 <p>解释型语言：Python、Php、Javascript等</p>
 <p>Java、C#属于翻译+解释型语言，例如Java程序会先编译成JVM字节码，然后再解释成机器码执行。</p>
-<h4 id="计算机的层次"><a href="#计算机的层次" class="headerlink" title="计算机的层次"></a>计算机的层次</h4><p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200313214215583.png" data-fancybox="group" data-caption="image-20200313214215583" class="fancybox"><img alt="image-20200313214215583" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200313214215583.png" class="lazyload" title="image-20200313214215583"></a></p>
+<h4 id="计算机的层次"><a href="#计算机的层次" class="headerlink" title="计算机的层次"></a>计算机的层次</h4><p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200313214215583.png" data-fancybox="group" data-caption="image-20200313214215583" class="fancybox"><img alt="image-20200313214215583" title="image-20200313214215583" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200313214215583.png" class="lazyload"></a></p>
 <p><strong>硬件逻辑层</strong></p>
 <p>由门、触发器等逻辑电路组成</p>
 <p><strong>微程序机器层</strong></p>
@@ -134,7 +134,7 @@ function activateLightMode(){
 <p><strong>设备选择线</strong>：主机选择I/O设备进行操作的信号线，对连在总线上的设备进行选择</p>
 <h4 id="CPU与I-O设备的通信"><a href="#CPU与I-O设备的通信" class="headerlink" title="CPU与I/O设备的通信"></a>CPU与I/O设备的通信</h4><p>分为程序中断、DMA（直接存储器访问）</p>
 <p><strong>程序中断</strong>：当外围I/O设备就绪时，向CPU发出中断信号，CPU有专门的电路响应中断信号。简图</p>
-<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200320150931915.png" data-fancybox="group" data-caption="image-20200320151023181" class="fancybox"><img alt="image-20200320151023181" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200320150931915.png" class="lazyload" title="image-20200320151023181"></a></p>
+<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200320150931915.png" data-fancybox="group" data-caption="image-20200320151023181" class="fancybox"><img alt="image-20200320151023181" title="image-20200320151023181" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200320150931915.png" class="lazyload"></a></p>
 <p>提供低速设备通知CPU的一种异步的方式，CPU可以在高速运转同时兼顾低速设备的响应。但是频繁中断，CPU使用效率低</p>
 <p><strong>DMA（直接存储器访问）</strong>：DMA直接连接主存与I/O设备，DMA工作时不需要CPU参与</p>
 <p>当主存与I/O设备交换信息时，不需要中断CPU，可以提高CPU的效率</p>
@@ -186,7 +186,7 @@ function activateLightMode(){
 <p><strong>最不经常使用算法（LFU）</strong>：优先淘汰最不经常使用的字块，需要额外的空间记录字块的使用频率</p>
 <p><strong>最近最少使用算法（LRU）</strong>：优先淘汰一段时间内没有使用的字块。有多种实现方法，一般使用双向链表，把当前访问节点置于链表前面（保证链表头部节点是最近使用的）</p>
 <h3 id="计算机的指令系统"><a href="#计算机的指令系统" class="headerlink" title="计算机的指令系统"></a>计算机的指令系统</h3><h4 id="机器指令的形式"><a href="#机器指令的形式" class="headerlink" title="机器指令的形式"></a>机器指令的形式</h4><p>机器指令主要由两个部分组成：操作码和地址码字段。操作码指明指令所要完成的操作，操作码位数反映了机器操作种类，如2<sup>8</sup>=256种操作；地址码直接给出操作数或者操作数的地址，分三地址指令（地址码字段有三个地址）、二地址指令和一地址指令。</p>
-<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200327095100477.png" data-fancybox="group" data-caption="image-20200327095100477" class="fancybox"><img alt="image-20200327095100477" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200327095100477.png" class="lazyload" title="image-20200327095100477"></a></p>
+<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200327095100477.png" data-fancybox="group" data-caption="image-20200327095100477" class="fancybox"><img alt="image-20200327095100477" title="image-20200327095100477" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200327095100477.png" class="lazyload"></a></p>
 <p>比如加法运算，第1,2个地址指向两个加数，第3个地址指向结果存放处。</p>
 <p>二地址指令就是(addr1)OP(addr2)→(addr1)或(addr2)</p>
 <p><strong>零地址指令</strong>：在机器指令中无地址码，一般是空操作、停机操作、中断返回操作等</p>
@@ -262,11 +262,11 @@ function activateLightMode(){
 <p>分别表示二进制（0b）、八进制（0o）、十六进制（0x）的1024</p>
 <h4 id="二进制运算的基础"><a href="#二进制运算的基础" class="headerlink" title="二进制运算的基础"></a>二进制运算的基础</h4><p>整数二级制十进制转换不展开讲了，重复相除和拆分展开</p>
 <p>十进制小数转换二进制，重复相乘法。</p>
-<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328100422573.png" data-fancybox="group" data-caption="image-20200328100422573" class="fancybox"><img alt="image-20200328100422573" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328100422573.png" class="lazyload" title="image-20200328100422573"></a></p>
+<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328100422573.png" data-fancybox="group" data-caption="image-20200328100422573" class="fancybox"><img alt="image-20200328100422573" title="image-20200328100422573" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328100422573.png" class="lazyload"></a></p>
 <h3 id="有符号数和无符号数"><a href="#有符号数和无符号数" class="headerlink" title="有符号数和无符号数"></a>有符号数和无符号数</h3><p>数值第一位就是符号位，使用0表示正数，使用1表示负数 即<strong>原码表示法</strong></p>
 <p>但是用原码进行运算非常复杂，特别是两个操作数符号不同的时候。首先判断两个操作数绝对值大小，使用绝对值大的数减去绝对值小的数，对于符号值，以绝对值大的为准</p>
 <h3 id="二进制的补码表示法"><a href="#二进制的补码表示法" class="headerlink" title="二进制的补码表示法"></a>二进制的补码表示法</h3><p>减法运算复杂，希望能找到使用正数替代复试的方法，使用加法代替减法操作，从而消除减法，但是在计算补码过程中，还是使用了减法</p>
-<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328104156873.png" data-fancybox="group" data-caption="image-20200328104156873" class="fancybox"><img alt="image-20200328104156873" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328104156873.png" class="lazyload" title="image-20200328104156873"></a></p>
+<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328104156873.png" data-fancybox="group" data-caption="image-20200328104156873" class="fancybox"><img alt="image-20200328104156873" title="image-20200328104156873" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328104156873.png" class="lazyload"></a></p>
 <p>其中n表示x的位数</p>
 <p>例1：n=4，x=13，计算x的二进制原码和补码</p>
 <p>原码：0,1101</p>
@@ -276,17 +276,17 @@ function activateLightMode(){
 <p>补码：2<sup>n+1</sup>+x=2<sup>4+1</sup>-13=100000-1101=10011</p>
 <p>第一位是符号位  x=1,0011</p>
 <h3 id="二进制反码表示法"><a href="#二进制反码表示法" class="headerlink" title="二进制反码表示法"></a>二进制反码表示法</h3><p>反码的目的是找出原码与补码之间的规律，消除转换过程中的减法</p>
-<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328110453247.png" data-fancybox="group" data-caption="image-20200328110453247" class="fancybox"><img alt="image-20200328110453247" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328110453247.png" class="lazyload" title="image-20200328110453247"></a></p>
+<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328110453247.png" data-fancybox="group" data-caption="image-20200328110453247" class="fancybox"><img alt="image-20200328110453247" title="image-20200328110453247" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328110453247.png" class="lazyload"></a></p>
 <p>例1：n=4 x=-13，计算x的二进制原码和反码</p>
 <p>原码：x=1,1101</p>
 <p>反码：(2<sup>n+1</sup>+x)+x=(2<sup>4+1</sup>-1)-13=11111-1101=10010</p>
 <p>反码：x=1,0010</p>
 <p><strong>正数的原码、补码、反码都是相同的</strong></p>
 <p><strong>负数的反码等于原码除符号位外按位取反，负数的补码等于反码加1</strong></p>
-<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328111934601.png" data-fancybox="group" data-caption="image-20200328111934601" class="fancybox"><img alt="image-20200328111934601" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328111934601.png" class="lazyload" title="image-20200328111934601"></a></p>
+<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328111934601.png" data-fancybox="group" data-caption="image-20200328111934601" class="fancybox"><img alt="image-20200328111934601" title="image-20200328111934601" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328111934601.png" class="lazyload"></a></p>
 <p>例2：n=4 x=-9 计算x的二进制原码 反码 补码</p>
 <p>原码：1,1001    反码：1,0110    补码：1,0111</p>
-<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328113723245.png" data-fancybox="group" data-caption="image-20200328113723245" class="fancybox"><img alt="image-20200328113723245" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328113723245.png" class="lazyload" title="image-20200328113723245"></a></p>
+<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328113723245.png" data-fancybox="group" data-caption="image-20200328113723245" class="fancybox"><img alt="image-20200328113723245" title="image-20200328113723245" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328113723245.png" class="lazyload"></a></p>
 <p>这样，通过先求反码再求补码的方式就可以消除减法</p>
 <h3 id="小数的补码"><a href="#小数的补码" class="headerlink" title="小数的补码"></a>小数的补码</h3><p>小数部分也与前面的规律相同</p>
 <p>例1：x=9/16，计算x的二进制原码 反码和补码</p>
@@ -299,18 +299,18 @@ function activateLightMode(){
 <h5 id="浮点数的表示格式"><a href="#浮点数的表示格式" class="headerlink" title="浮点数的表示格式"></a>浮点数的表示格式</h5><p>N=S×r<sup>j</sup></p>
 <p>S：尾数    r：基数    j：阶码</p>
 <p>尾数必须使用纯小数</p>
-<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328155237200.png" data-fancybox="group" data-caption="image-20200328155237200" class="fancybox"><img alt="image-20200328155237200" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328155237200.png" class="lazyload" title="image-20200328155237200"></a></p>
+<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328155237200.png" data-fancybox="group" data-caption="image-20200328155237200" class="fancybox"><img alt="image-20200328155237200" title="image-20200328155237200" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328155237200.png" class="lazyload"></a></p>
 <h5 id="浮点数的表示范围"><a href="#浮点数的表示范围" class="headerlink" title="浮点数的表示范围"></a>浮点数的表示范围</h5><p>假设阶码数值取m位，尾数数值取n位。</p>
 <p>阶码能够表达的最大值：2<sup>m</sup>-1</p>
 <p>阶码表示范围：[-(2<sup>m</sup>-1), 2<sup>m</sup>-1]</p>
 <p>尾数能够表达的最大值：1-2<sup>-n</sup>，最小值2<sup>-n</sup></p>
 <p>尾数表示范围：负数[-(1-2<sup>-n</sup>), -(2<sup>-n</sup>)]    正数[2<sup>-n</sup>, 1-2<sup>-n</sup>]</p>
-<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328161505201.png" data-fancybox="group" data-caption="image-20200328161505201" class="fancybox"><img alt="image-20200328161505201" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328161505201.png" class="lazyload" title="image-20200328161505201"></a></p>
+<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328161505201.png" data-fancybox="group" data-caption="image-20200328161505201" class="fancybox"><img alt="image-20200328161505201" title="image-20200328161505201" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328161505201.png" class="lazyload"></a></p>
 <p>单精度浮点数：使用4字节、32位来表达浮点数（float）</p>
 <p>双精度浮点数：使用8字节、64位来表达浮点数（double）</p>
 <h5 id="浮点数的规格化"><a href="#浮点数的规格化" class="headerlink" title="浮点数的规格化"></a>浮点数的规格化</h5><p>尾数必须用纯小数，最高位必须是1</p>
-<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328231643732.png" data-fancybox="group" data-caption="image-20200328231643732" class="fancybox"><img alt="image-20200328231643732" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328231643732.png" class="lazyload" title="image-20200328231643732"></a></p>
-<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328232756330.png" data-fancybox="group" data-caption="image-20200328232756330" class="fancybox"><img alt="image-20200328232756330" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328232756330.png" class="lazyload" title="image-20200328232756330"></a></p>
+<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328231643732.png" data-fancybox="group" data-caption="image-20200328231643732" class="fancybox"><img alt="image-20200328231643732" title="image-20200328231643732" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328231643732.png" class="lazyload"></a></p>
+<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328232756330.png" data-fancybox="group" data-caption="image-20200328232756330" class="fancybox"><img alt="image-20200328232756330" title="image-20200328232756330" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200328232756330.png" class="lazyload"></a></p>
 <p><strong>例题必须理解</strong></p>
 <h4 id="定点数与浮点数的对比"><a href="#定点数与浮点数的对比" class="headerlink" title="定点数与浮点数的对比"></a>定点数与浮点数的对比</h4><ul>
 <li>当定点数与浮点数位数相同时，浮点数表示的范围更大</li>
@@ -344,7 +344,7 @@ function activateLightMode(){
 <p>双符号位产生的进位丢弃</p>
 <p>结果的双符号位不同则表示溢出</p>
 <p>所以例4：</p>
-<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200404183948040.png" data-fancybox="group" data-caption="image-20200404183948040" class="fancybox"><img alt="image-20200404183948040" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200404183948040.png" class="lazyload" title="image-20200404183948040"></a></p>
+<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200404183948040.png" data-fancybox="group" data-caption="image-20200404183948040" class="fancybox"><img alt="image-20200404183948040" title="image-20200404183948040" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20200404183948040.png" class="lazyload"></a></p>
 <p>说明例题4原结果无效！</p>
 <h4 id="定点数的减法"><a href="#定点数的减法" class="headerlink" title="定点数的减法"></a>定点数的减法</h4><p>整数减法：<br>$$<br>A[补]-B[补]=A+(-B)<a href="mod2^{n+1}">补</a><br>$$<br>小数减法：<br>$$<br>A[补]-B[补]=A+(-B)<a href="mod2">补</a><br>$$<br><strong>(-B)[补]等于B[补]连同符号位按位取反，末位加一</strong></p>
 <p><strong>例5：</strong>A=11001000,B=-00110100，求A-B</p>
@@ -488,7 +488,7 @@ function activateLightMode(){
 <li><p>浮点运算主要通过阶码的双符号位判断是否溢出。如果规格化后，阶码双符号位不一致，则认为是溢出</p>
 </li>
 </ul>
-<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-2020.png" data-fancybox="group" data-caption="image-20200404223253625" class="fancybox"><img alt="image-20200404223253625" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-2020.png" class="lazyload" title="image-20200404223253625"></a></p>
+<p><a href="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-2020.png" data-fancybox="group" data-caption="image-20200404223253625" class="fancybox"><img alt="image-20200404223253625" title="image-20200404223253625" data-src="/2020/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-2020.png" class="lazyload"></a></p>
 <p>例子：x=0.11010011×2<sup>1101</sup>, y=0.11101110×2<sup>1100</sup>, 假设阶码4位，尾数8位，计算x+y</p>
 <p>结果为：</p>
 <table>
